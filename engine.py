@@ -34,7 +34,7 @@ def generate_script(topic):
     - Output ONLY the spoken text.
     """
     response = ai_client.models.generate_content(
-        model="gemini-2.5-flash",
+                model="gemini-3.6-flash",
         contents=prompt
     )
     return re.sub(r'[*_#]', '', response.text).strip().replace('\n', ' ')
